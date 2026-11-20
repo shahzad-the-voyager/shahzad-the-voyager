@@ -106,32 +106,15 @@ Fintech and mortgage technology for Nexa Lending and bevri.ai: borrower onboardi
 
 ## 03 · Engineering deck
 
-<table>
-  <tr>
-    <td><b>Languages</b></td>
-    <td><img src="https://skillicons.dev/icons?i=go,python,cpp,ts,js&theme=dark" height="38" alt="Go, Python, C++, TypeScript, JavaScript"></td>
-    <td>SQL</td>
-  </tr>
-  <tr>
-    <td><b>Backend &amp; data</b></td>
-    <td><img src="https://skillicons.dev/icons?i=nodejs,fastapi,postgres,redis,kafka&theme=dark" height="38" alt="Node.js, FastAPI, PostgreSQL, Redis, Kafka"></td>
-    <td>REST · gRPC · concurrency · distributed systems · system design</td>
-  </tr>
-  <tr>
-    <td><b>Mobile &amp; web</b></td>
-    <td><img src="https://skillicons.dev/icons?i=flutter,dart,swift,react,nextjs,tailwind&theme=dark" height="38" alt="Flutter, Dart, Swift, React, Next.js, Tailwind CSS"></td>
-    <td>iOS · SwiftUI</td>
-  </tr>
-  <tr>
-    <td><b>Cloud &amp; delivery</b></td>
-    <td><img src="https://skillicons.dev/icons?i=aws,gcp,docker,kubernetes,githubactions,elasticsearch&theme=dark" height="38" alt="AWS, Google Cloud, Docker, Kubernetes, GitHub Actions, Elasticsearch"></td>
-    <td>Cloud Run · CI/CD · ELK</td>
-  </tr>
-  <tr>
-    <td><b>Machine intelligence</b></td>
-    <td colspan="2">CNNs · reinforcement learning · LLMs · RAG · OCR · intelligent document processing</td>
-  </tr>
-</table>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/pinout-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/pinout-light.svg">
+    <img src="assets/pinout-light.svg" width="100%" alt="SA-2021, a 24-pin chip datasheet of my stack. Languages: Go, Python, C++, TypeScript. Data: PostgreSQL, SQL, Redis, Kafka. Systems: REST, gRPC, Node.js, FastAPI, concurrency, distributed systems, system design. Mobile and web: Flutter, Dart, Swift, iOS, React, Next.js. Cloud: AWS, Google Cloud, Cloud Run, Docker, Kubernetes, GitHub Actions, ELK. AI: LLMs, RAG, OCR, intelligent document processing, CNNs, reinforcement learning. Pin 12 (ground) is first principles. Pin 24 (power) is curiosity.">
+  </picture>
+</p>
+
+<p align="center"><sub>Grounded in first principles. Powered by curiosity, at 72 bpm.</sub></p>
 
 <br>
 
