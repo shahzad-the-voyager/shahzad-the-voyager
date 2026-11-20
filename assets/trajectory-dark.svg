@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 352" width="960" height="352" role="img" aria-labelledby="title desc">
   <title id="title">Ship's log: a Voyager-style trajectory</title>
-  <desc id="desc">A mission trajectory diagram. Launched from the origin, UET Peshawar in 2021, the course gains speed from five flybys, like gravity assists: ML internship (2021.04), AntonX (2021.08), Tripmate (2024.01), Utor (2024.07) and CCRIPT (2026), where the probe is now. A dashed course continues across the heliopause into interstellar space, labelled medicine.</desc>
+  <desc id="desc">A mission trajectory diagram. Launched from the origin, UET Peshawar in 2021, the course gains speed from five flybys, like gravity assists: ML internship (2021.04), AntonX (2021.08), Tripmate (2024.01), Utor (2024.07) and CCRIPT (2026), where the probe is now. A dashed course continues across the heliopause into interstellar space. The destination is redacted: classified.</desc>
   <defs>
     <linearGradient id="trail" gradientUnits="userSpaceOnUse" x1="66" y1="0" x2="716" y2="0">
       <stop offset="0" stop-color="#58a6ff"/><stop offset=".68" stop-color="#58a6ff"/>
@@ -37,7 +37,8 @@
     <path d="M 0 -4.5 L 9 0 L 0 4.5 Z" fill="#ff7b72" opacity=".8" transform="translate(922 50) rotate(-10.3)"/>
     <text x="826" y="256" class="t" font-size="10" letter-spacing="2" fill="#6e7681">HELIOPAUSE</text>
     <text x="940" y="124" text-anchor="end" class="t" font-size="10.5" letter-spacing="2" fill="#6e7681">INTERSTELLAR</text>
-    <text x="940" y="142" text-anchor="end" class="t" font-size="13" font-style="italic" fill="#ff7b72">medicine</text>
+    <rect x="848" y="132" width="92" height="13" rx="1.5" fill="#ff7b72" opacity=".9"/>
+    <text x="940" y="160" text-anchor="end" class="t" font-size="9.5" letter-spacing="2" fill="#6e7681">CLASSIFIED</text>
     <circle class="ping" cx="745" cy="99" r="5"/>
     <circle cx="745" cy="99" r="3.8" fill="#ff7b72"/>
   </g>

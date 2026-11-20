@@ -3,21 +3,24 @@
 
   The header trace is not decoration.
   Left half:  0101 0011 0100 0001  =  0x53 0x41  =  "SA", my initials in ASCII.
-  Right half: an ECG rhythm strip. The highlight sweeps three beats every 2.5 s, which is 72 bpm.
-  The heart's pacemaker is the sinoatrial node, which everyone abbreviates to SA.
-  I did not plan to share initials with a cardiac structure. I am choosing to take it as a sign.
+  Right half: the same sixteen bits, BPSK-modulated onto a carrier: the phase flips
+              wherever a bit changes. The signal fades with distance, plotted on a
+              log scale in AU, past Jupiter and Neptune and out across the
+              heliopause, which Voyager 1 crossed in 2012 at about 121 AU.
+  Voyager 1 still phones home on a transmitter of roughly 23 watts.
+  Proof that you can go a very long way on very little power, if you aim well.
 -->
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/signal-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/signal-light.svg">
-    <img src="assets/signal-light.svg" width="100%" alt="SHAHZAD AHMAD · Engineer · Voyager · Medicine in pursuit. A single signal trace: the ASCII bits for 'S' and 'A' on the left become an ECG rhythm strip at 72 bpm on the right.">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/carrier-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/carrier-light.svg">
+    <img src="assets/carrier-light.svg" width="100%" alt="SHAHZAD AHMAD · Engineer · Voyager · Still transmitting. A single signal trace: the ASCII bits for 'S' and 'A' on the left are modulated onto a radio carrier on the right, which fades as it heads out past Jupiter, Neptune and the heliopause.">
   </picture>
 </p>
 
 <p align="center">
-  <sub>Both ends of that line are signed <b>SA</b>. On the left, my initials in ASCII. On the right, the heart's sinoatrial node.<br>Same signature, different hardware.</sub>
+  <sub>My initials in ASCII, put on a carrier and sent outward. Every AU makes the signal a little fainter.<br>It has not stopped.</sub>
 </p>
 
 <p align="center">
@@ -25,7 +28,7 @@
   <a href="#02--ships-log">log</a> ·
   <a href="#03--engineering-deck">deck</a> ·
   <a href="#04--built-in-public">built</a> ·
-  <a href="#05--the-other-manual">frontier</a> ·
+  <a href="#05--golden-record">record</a> ·
   <a href="#06--diagnostics">diagnostics</a> ·
   <a href="#07--signal">signal</a>
 </p>
@@ -34,9 +37,9 @@
 
 I'm Shahzad. I build software: backend systems in Go, mobile apps in Flutter and Swift, and lately the pipelines that let AI read financial documents without guessing. Five years of production have taught me that every system is a negotiation between what you designed and what actually happens.
 
-I trained as a Computer Systems Engineer at UET Peshawar, which means I met computers from the transistor up. Somewhere along the way I noticed that the most sophisticated system I had ever encountered was the one running me, and it shipped with no documentation at all. So the long-term heading is medicine, ideally cardiothoracic surgery, with engineering and robotics coming along for the ride.[^1]
+I trained as a Computer Systems Engineer at UET Peshawar, which means I met computers from the transistor up: gates first, then microprocessors, then everything people build on top of them. I have been travelling up the stack, and outward, ever since.
 
-Until then I ship software, and keep a growing list of questions for the day I'm allowed into an anatomy lab.
+The handle is a standing order. Voyager 1 launched in 1977 on 1970s computers, and it is still out there, still sending data home. That is the bar: simple enough to keep working, sturdy enough to go further than anyone planned.
 
 <br>
 
@@ -49,15 +52,15 @@ Until then I ship software, and keep a growing list of questions for the day I'm
           ·         │       * ·               position   engineer · fintech & AI
         ·           │     /     ·             logged     5+ years in production
       ·             │   /         ·           hands on   Go · Flutter · Postgres
-                    │ /                       heading    045° engineering × medicine
-  AI  W ────────────┼──────────── E MEDICINE  bound for  medicine, then the heart
-                    │                         eta        a decade, give or take
-      ·             │             ·                      a residency
+                    │ /                       heading    045° and holding
+  AI  W ────────────┼──────────── E UNCHARTED bound for  past the heliopause
+                    │                         eta        classified
+      ·             │             ·           power      curiosity · no half-life
         ·           │           ·
           ·         │         ·               status     underway
              ·      │      ·
                 ·   S   ·
-                 ROBOTICS
+                  MOBILE
 ```
 
 <br>
@@ -68,9 +71,9 @@ Voyager 1 reached interstellar space on borrowed momentum: every planet it passe
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/journey-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/journey-light.svg">
-    <img src="assets/journey-light.svg" width="100%" alt="A Voyager-style trajectory. Launched from UET Peshawar in 2021, the course gains speed from five flybys: ML internship (2021.04), AntonX (2021.08), Tripmate (2024.01), Utor (2024.07) and CCRIPT (2026), where the probe is now. A dashed course continues past the heliopause into interstellar space: medicine.">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/trajectory-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/trajectory-light.svg">
+    <img src="assets/trajectory-light.svg" width="100%" alt="A Voyager-style trajectory. Launched from UET Peshawar in 2021, the course gains speed from five flybys: ML internship (2021.04), AntonX (2021.08), Tripmate (2024.01), Utor (2024.07) and CCRIPT (2026), where the probe is now. A dashed course continues past the heliopause into interstellar space. The destination is redacted.">
   </picture>
 </p>
 
@@ -78,7 +81,7 @@ Voyager 1 reached interstellar space on borrowed momentum: every planet it passe
 
 **`000` The Origin** · UET Peshawar · Class of 2021
 
-B.Sc. Computer Systems Engineering, CGPA 3.60. Logic gates, microprocessors, signals, networks: computers taught bottom-up, which is the right way to meet anything you plan to spend your life debugging. The final-year project taught a phone to diagnose sick leaves. [More on that below.](#my-first-patients-were-leaves)
+B.Sc. Computer Systems Engineering, CGPA 3.60. Logic gates, microprocessors, signals, networks: computers taught bottom-up, which is the right way to meet anything you plan to spend your life debugging. For the final-year project, we built a mobile app that diagnoses plant diseases from a single photo of a leaf: convolutional neural networks for the diagnosis, reinforcement learning in the pipeline, and advice on what to do now and later. The leaves were model patients. Not one asked for a second opinion.
 
 **`001` First Contact** · Machine Learning Internship · Apr – Aug 2021
 
@@ -100,7 +103,7 @@ Mobile products across several startups: Frich (Series A, ~$2M raised), Arête, 
 
 Fintech and mortgage technology for Nexa Lending and bevri.ai: borrower onboarding, POS and LOS integrations, intelligent document processing and AI-assisted workflows, running on Google Cloud with Go, PostgreSQL, Cloud Run, GitHub Actions, Stripe and OAuth. The documents arrive as pay stubs, bank statements, tax forms, and the occasional photo taken at an angle that suggests a moving vehicle. The software has to read all of them correctly, because someone's home depends on it.
 
-**`006` The Next Frontier** · Medicine · [see below](#05--the-other-manual)
+**`006` Beyond the Heliopause** · destination classified · *the log resumes on arrival*
 
 <br>
 
@@ -108,13 +111,13 @@ Fintech and mortgage technology for Nexa Lending and bevri.ai: borrower onboardi
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/pinout-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/pinout-light.svg">
-    <img src="assets/pinout-light.svg" width="100%" alt="SA-2021, a 24-pin chip datasheet of my stack. Languages: Go, Python, C++, TypeScript. Data: PostgreSQL, SQL, Redis, Kafka. Systems: REST, gRPC, Node.js, FastAPI, concurrency, distributed systems, system design. Mobile and web: Flutter, Dart, Swift, iOS, React, Next.js. Cloud: AWS, Google Cloud, Cloud Run, Docker, Kubernetes, GitHub Actions, ELK. AI: LLMs, RAG, OCR, intelligent document processing, CNNs, reinforcement learning. Pin 12 (ground) is first principles. Pin 24 (power) is curiosity.">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/chip-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/chip-light.svg">
+    <img src="assets/chip-light.svg" width="100%" alt="SA-2021, a 24-pin chip datasheet of my stack. Languages: Go, Python, C++, TypeScript. Data: PostgreSQL, SQL, Redis, Kafka. Systems: REST, gRPC, Node.js, FastAPI, concurrency, distributed systems, system design. Mobile and web: Flutter, Dart, Swift, iOS, React, Next.js. Cloud: AWS, Google Cloud, Cloud Run, Docker, Kubernetes, GitHub Actions, ELK. AI: LLMs, RAG, OCR, intelligent document processing, CNNs, reinforcement learning. Pin 12 (ground) is first principles. Pin 24 (power) is curiosity.">
   </picture>
 </p>
 
-<p align="center"><sub>Grounded in first principles. Powered by curiosity, at 72 bpm.</sub></p>
+<p align="center"><sub>Grounded in first principles. Powered by curiosity.</sub></p>
 
 <br>
 
@@ -133,44 +136,27 @@ Most of my public code lives under my earlier handle, [**@spacebuckett**](https:
 
 <br>
 
-## 05 · The other manual
+## 05 · Golden record
 
-I have spent years learning systems that people wrote. Lately I can't stop thinking about the one nobody wrote down.
-
-### My first patients were leaves
-
-For my final-year project at UET, we built a mobile app that diagnoses plant diseases from a photograph. Point the camera at a leaf, and convolutional neural networks identify the likely disease, with reinforcement learning in the pipeline, before the app recommends what to do right away and what to do over the longer term. The patients were very cooperative. Not one of them asked for a second opinion.
-
-It was the first time I pointed an engineering tool at something alive. It has not been the last time I wanted to.
-
-### Field notes from an engineer reading physiology
-
-| | Observation | In my native language |
-| :-: | :-- | :-- |
-| `01` | The **sinoatrial node** fires roughly 60 to 100 times a minute at rest, with no external clock. | A self-starting oscillator that ships with the hardware. |
-| `02` | The **AV node** holds each impulse for about a tenth of a second, so the ventricles finish filling before they contract. | A deliberate delay line. More thoughtful than most retry logic I have reviewed. |
-| `03` | If the SA node fails, the AV junction takes over at 40 to 60 beats a minute. If that fails, the ventricles pace themselves at 20 to 40. | Failover three levels deep, degrading gracefully, with no pager involved. |
-| `04` | **Myelin** lets nerve impulses jump from gap to gap, reaching around 120 m/s, against roughly 1 m/s in unmyelinated fibres. | Cable insulation, a few hundred million years before electrical engineering. |
-| `05` | The immune system learns to separate **self** from **non-self**. When that boundary fails, the result is autoimmune disease. | Anomaly detection where a false positive attacks the host. It makes my alerting problems look small. |
-
-<sub>Written by an engineer reading well outside my field. Corrections from physicians are welcome, and will be merged with gratitude.</sub>
-
-### Where the two maps meet
-
-Today's surgical robots are mostly teleoperated. The surgeon remains the controller, and the machine contributes tremor filtering, motion scaling and a magnified 3D view. The open problems are the ones I find hardest to stop thinking about: haptic feedback, latency, perception, imaging, and how much autonomy anyone should trust near a beating heart.
+In 1977 both Voyagers left carrying a golden record: greetings, music and the sounds of Earth, for whoever finds the probe. The cover explains how to play it, in binary. Mine is shorter, and its binary is in the header.
 
 ```text
-ROUTE                                                       STATUS
-─────────────────────────────────────────────────────────────────────────────
-[x]  Computer Systems Engineering · UET Peshawar             2021
-[x]  Production software · backend, mobile, cloud            2021 → now
-[x]  Applied ML · from leaf images to document AI            2021 → now
-[ ]  Medicine                                                the long climb
-[ ]  Cardiothoracic surgery                                  the summit
-[ ]  Surgical robotics · medical imaging · AI in healthcare  where both maps join
+                          THE GOLDEN RECORD · SA-2021 · 16⅔ RPM
+                          ───────────────────────────────────────────────
+      .-''''''''-.        SIDE A · FLIGHT RULES
+    .'  .------.  '.      A1  Read the logs before you read the code.
+   /   /        \   \     A2  Correct, then observable, then fast.
+  |   |    SA    |   |    A3  Every retry deserves a backoff and a reason.
+  |   |    ()    |   |    A4  Assume the document was photographed sideways.
+   \   \        /   /     A5  Boring technology, interesting problems.
+    '.  '------'  .'
+      '-........-'        SIDE B · SOUNDS OF EARTH
+                          B1  go test -race ./... passing on the first run
+                          B2  a pager going off at 3 a.m.
+                          B3  a hot reload landing in under a second
+                          B4  deployment successfully rolled out
+                          B5  the silence after a clean deploy
 ```
-
-Open tabs: `human physiology` · `surgical robotics` · `medical imaging` · `biomedical engineering` · `computational biology` · `AI in healthcare`
 
 <br>
 
@@ -178,7 +164,7 @@ Open tabs: `human physiology` · `surgical robotics` · `medical imaging` · `bi
 
 ```text
 $ systemctl status voyager
-● voyager.service - Shahzad Ahmad: engineer, voyager, medicine in pursuit
+● voyager.service - Shahzad Ahmad: engineer, voyager, still transmitting
      Loaded: loaded (/etc/systemd/system/voyager.service; enabled; preset: curious)
      Active: active (running) since Aug 2021
        Docs: man 7 first-principles
@@ -189,24 +175,23 @@ $ systemctl status voyager
              ├─101 go test -race ./...
              ├─102 flutter build ipa --release
              ├─103 tail -f /var/log/production.log
-             ├─104 grep -ri "why does the AV node wait" ~/questions
-             └─105 wonder --about "robots that hold scalpels"
+             ├─104 ping -c 1 voyager1        # round trip: about two days
+             └─105 wonder --about "what is past the heliopause"
 
 Nov 20 02:13:07 earth voyager[1]: sleep(8h) returned at 5h12m: woken by an idea
-Nov 20 02:13:09 earth voyager[1]: idea: "what if I also learned organic chemistry"
+Nov 20 02:13:09 earth voyager[1]: idea: "orbital mechanics, but as a Go library"
 Nov 20 02:13:10 earth voyager[1]: warning: scope creep detected, proceeding anyway
 ```
 
 ```text
 $ gh issue list --repo shahzad/self --state all
 #108  Curiosity has no rate limiter                    by-design
-#107  New discipline opened before the last PR merged  needs-triage
+#107  Side project opened before the last PR merged    needs-triage
 #106  Sleep scheduler is non-deterministic             known-issue
-#105  "How hard can medicine be?"                      answered: very. still going.
+#105  "How far can 1977 hardware go?"                  answered: interstellar.
 #104  Ambition allocates more RAM than the host has    wontfix
-#99   Appendix in production, purpose unclear          closed: may be a reservoir
-                                                       for gut bacteria. works as
-                                                       intended.
+#99   Signal gets weaker with every AU                 closed: inverse-square law.
+                                                       works as intended.
 ```
 
 <details>
@@ -221,8 +206,7 @@ require (
 	engineering/systems  v5.3.0             // production since 2021
 	engineering/mobile   v2.1.0             // Flutter, Swift
 	engineering/ai       v1.4.0             // from leaf images to document AI
-	medicine/physiology  v0.0.0-pre         // indirect
-	medicine/surgery     v0.0.0-unreleased  // indirect, long-term
+	frontier/next        v0.0.0-classified  // indirect, long-term
 )
 
 replace sleep => ./sleep/TODO
@@ -236,7 +220,7 @@ exclude certainty v1.0.0 // incompatible with curiosity
 
 ## 07 · Signal
 
-Always happy to talk about distributed systems, document AI and mobile products, and above all about anything happening where engineering meets medicine.
+Always happy to talk about distributed systems, document AI, mobile products, and anything still doing its job decades after it shipped.
 
 **GitHub** · you are here · earlier work at [github.com/spacebuckett](https://github.com/spacebuckett)
 <!-- TODO(shahzad): add your LinkedIn here, e.g. **LinkedIn** · [linkedin.com/in/your-handle](https://www.linkedin.com/in/your-handle) -->
@@ -255,6 +239,4 @@ END OF LOG.
 THE EXPEDITION CONTINUES...
 ```
 
-[^1]: For the record: I am not a doctor, and not yet a medical student. I am an engineer with a destination. The distinction matters to me, and I intend to earn the rest of the way properly.
-
-<!-- If you read this far into the raw markdown, you would make a good resident: thorough, and awake far too late. -->
+<!-- If you read this far into the raw markdown, you would do well on a Deep Space Network shift: patient, thorough, and good at hearing very faint signals. -->

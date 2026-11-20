@@ -4,9 +4,9 @@
   <style>
     .t { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
     .s { animation: in .5s ease-out backwards; }
-    .beat { transform-box: fill-box; transform-origin: center; animation: beat .833s ease-out 1.5s infinite; }
+    .beat { transform-box: fill-box; transform-origin: center; animation: beat 2.4s ease-in-out 1.5s infinite; }
     @keyframes in { from { opacity: 0; } }
-    @keyframes beat { 0% { transform: scale(1); opacity: 1; } 14% { transform: scale(1.9); opacity: .9; } 40%, 100% { transform: scale(1); opacity: 1; } }
+    @keyframes beat { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.6); opacity: .55; } }
     @media (prefers-reduced-motion: reduce) { .s, .beat { animation: none; } }
   </style>
   <text x="183" y="32" class="t" font-size="11" letter-spacing="2.5" fill="#59636e">ENGINEERING DECK // PINOUT</text>
