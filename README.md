@@ -46,7 +46,7 @@ Until then I ship software, and keep a growing list of questions for the day I'm
                ENGINEERING
                 ·   N   ·                     CURRENT FIX
              ·      │      ·                  ────────────────────────────────────
-          ·         │       * ·               position   software engineer, SDE III
+          ·         │       * ·               position   engineer · fintech & AI
         ·           │     /     ·             logged     5+ years in production
       ·             │   /         ·           hands on   Go · Flutter · Postgres
                     │ /                       heading    045° engineering × medicine
@@ -64,19 +64,17 @@ Until then I ship software, and keep a growing list of questions for the day I'm
 
 ## 02 · Ship's log
 
-Navigators call it *dead reckoning*: you work out where you are from where you've been, how fast, and for how long. Here is mine.
+Navigators call it *dead reckoning*: you work out where you are from where you've been. These are the ports, in order of departure.
 
-```text
-                    2021     2022     2023     2024     2025     2026
-                    │        │        │        │        │        │
-001  ML internship    ███
-002  AntonX              ████████████████████████████████████████████████ ► now
-003  Tripmate                                  █████████
-004  Utor                                           █████████
-005  CCript                                                        ██████ ► now
-```
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/voyage-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/voyage-light.svg">
+    <img src="assets/voyage-light.svg" width="100%" alt="Ports of call, in order of departure: ML internship (2021.04), AntonX (2021.08), Tripmate (2024.01), Utor (2024.07), CCRIPT (2026, current position). Beyond it, a dashed course into uncharted waters: medicine.">
+  </picture>
+</p>
 
-<sub>Overlapping bars are not a rendering bug. I have simply never been good at running one process at a time.</sub>
+<sub>A chart records where a voyage began, not every hour at sea. Some of these voyages overlapped: I have never been good at running one process at a time.</sub>
 
 **`000` The Origin** · UET Peshawar · Class of 2021
 
@@ -86,9 +84,9 @@ B.Sc. Computer Systems Engineering, CGPA 3.60. Logic gates, microprocessors, sig
 
 Applied machine learning in the months around graduation. My first encounter with a model that is confidently wrong, and the start of a long, respectful relationship with validation sets.
 
-**`002` Into Production** · AntonX · Aug 2021 – present
+**`002` Into Production** · AntonX · joined Aug 2021
 
-Walked in as an intern, now a Software Development Engineer III. Go services, PostgreSQL, AWS, Kubernetes, GitHub Actions, and an ELK stack for finding out what actually happened at 3 a.m. Products along the way include HalalNow and Tripmate. Five years in, production is still the most honest code reviewer I know.
+Walked in as an intern and grew into a Software Development Engineer III. Go services, PostgreSQL, AWS, Kubernetes, GitHub Actions, and an ELK stack for finding out what actually happened at 3 a.m. Products along the way include HalalNow and Tripmate. It is where I learned that production is the most honest code reviewer there is.
 
 **`003` Tripmate** · Jan 2024 – Jan 2025
 
@@ -98,7 +96,7 @@ A travel product built around maps: Flutter, Mapbox and Firebase, shipped to iOS
 
 Mobile products across several startups: Frich (Series A, ~$2M raised), Arête, Auura AI and BhogAI. Different domains, one recurring lesson: a phone is a small distributed system that its user can drop in a puddle.
 
-**`005` Money, Documents & Machines That Read** · CCript · 2026 – present
+**`005` Money, Documents & Machines That Read** · CCRIPT · 2026 – present
 
 Fintech and mortgage technology for Nexa Lending and bevri.ai: borrower onboarding, POS and LOS integrations, intelligent document processing and AI-assisted workflows, running on Google Cloud with Go, PostgreSQL, Cloud Run, GitHub Actions, Stripe and OAuth. The documents arrive as pay stubs, bank statements, tax forms, and the occasional photo taken at an angle that suggests a moving vehicle. The software has to read all of them correctly, because someone's home depends on it.
 
