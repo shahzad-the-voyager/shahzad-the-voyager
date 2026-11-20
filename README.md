@@ -38,9 +38,10 @@
   <a href="#02--ships-log">log</a> ·
   <a href="#03--engineering-deck">deck</a> ·
   <a href="#04--built-in-public">built</a> ·
-  <a href="#05--golden-record">record</a> ·
-  <a href="#06--diagnostics">diagnostics</a> ·
-  <a href="#07--signal">signal</a>
+  <a href="#05--onboard-library">library</a> ·
+  <a href="#06--golden-record">record</a> ·
+  <a href="#07--diagnostics">diagnostics</a> ·
+  <a href="#08--signal">signal</a>
 </p>
 
 <br>
@@ -62,7 +63,7 @@ The handle is a standing order. Voyager 1 launched in 1977 on 1970s computers, a
           ·         │       * ·               position   engineer · fintech & AI
         ·           │     /     ·             logged     5+ years in production
       ·             │   /         ·           hands on   Go · Flutter · Postgres
-                    │ /                       heading    045° and holding
+                    │ /                       heading    042° and holding
   AI  W ────────────┼──────────── E UNCHARTED bound for  past the heliopause
                     │                         eta        classified
       ·             │             ·           power      curiosity · no half-life
@@ -81,9 +82,9 @@ Voyager 1 reached interstellar space on borrowed momentum: every planet it passe
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/trajectory-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/trajectory-light.svg">
-    <img src="assets/trajectory-light.svg" width="100%" alt="A Voyager-style trajectory. Launched from UET Peshawar in 2021, the course gains speed from five flybys: ML internship (2021.04), AntonX (2021.08), Tripmate (2024.01), Utor (2024.07) and CCRIPT (2026), where the probe is now. A dashed course continues past the heliopause into interstellar space. The destination is redacted.">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/course-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/course-light.svg">
+    <img src="assets/course-light.svg" width="100%" alt="A Voyager-style trajectory. Launched from UET Peshawar in 2021, the course gains speed from five flybys: ML internship (2021.04), AntonX (2021.08), Tripmate (2024.01), Utor (2024.07) and CCRIPT (2026), where the probe is now. A dashed course continues past the heliopause into interstellar space. The destination is redacted.">
   </picture>
 </p>
 
@@ -146,7 +147,34 @@ Most of my public code lives under my earlier handle, [**@spacebuckett**](https:
 
 <br>
 
-## 05 · Golden record
+## 05 · Onboard library
+
+The golden record is what Voyager carries for strangers. This is what I carry for myself: the books that rewrote parts of my firmware. Austin Kleon would call it a swipe file, so I don't list what I read. I list what I stole.
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/library-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/library-light.svg">
+    <img src="assets/library-light.svg" width="100%" alt="A shelf of book spines drawn as read-only memory modules, numbered 01 to 08, with two open slots. The Hitchhiker's Guide is a coral spine reading DON'T PANIC, with a towel draped over it. The three Illuminae Files spines each carry a redaction bar.">
+  </picture>
+</p>
+
+| ROM | Book | What I stole |
+| :-: | :-- | :-- |
+| `01` | **Steal Like an Artist · Show Your Work! · Keep Going** · Austin Kleon | Nothing is original. Credit your sources and show the process. It is why this README lists its influences. |
+| `02` | **The Hitchhiker's Guide to the Galaxy** · Douglas Adams | DON'T PANIC, in large friendly letters, is still the best first line for an incident runbook. |
+| `03` | **Psycho-Cybernetics** · Maxwell Maltz | A person works like a servo: set the target, read the error, correct. Same loop as a thermostat. |
+| `04` | **The Illuminae Files** · Amie Kaufman & Jay Kristoff | A whole story told through logs, transcripts and redacted files. Write your logs as if someone will rebuild the story from them, because someone will. |
+| `05` | **Harry Potter** · J.K. Rowling | The Marauder's Map is the best monitoring dashboard ever imagined: every entity, live, on one screen. |
+| `06` | **Algorithms to Live By** · Brian Christian & Tom Griffiths | Explore versus exploit, and knowing when to stop searching. |
+| `07` | **Thinking, Fast and Slow** · Daniel Kahneman | The fast mind writes the first draft and the slow mind reviews it. That is code review. |
+| `08` | **Before the Coffee Gets Cold** · Toshikazu Kawaguchi | You can visit the past but never change it. Those are the café's rules, and git's. |
+
+<sub>Slots 09 and 10 are open. Recommendations welcome.</sub>
+
+<br>
+
+## 06 · Golden record
 
 In 1977 both Voyagers left carrying a golden record: greetings, music and the sounds of Earth, for whoever finds the probe. The cover explains how to play it, in binary. Mine is shorter, and its binary is in the header.
 
@@ -170,13 +198,14 @@ In 1977 both Voyagers left carrying a golden record: greetings, music and the so
 
 <br>
 
-## 06 · Diagnostics
+## 07 · Diagnostics
 
 ```text
 $ systemctl status voyager
 ● voyager.service - Shahzad Ahmad: engineer, voyager, still transmitting
      Loaded: loaded (/etc/systemd/system/voyager.service; enabled; preset: curious)
      Active: active (running) since Aug 2021
+     Status: "mostly harmless"
        Docs: man 7 first-principles
    Main PID: 1 (curiosity)
       Tasks: 5 (limit: none configured)
@@ -202,6 +231,7 @@ $ gh issue list --repo shahzad/self --state all
 #104  Ambition allocates more RAM than the host has    wontfix
 #99   Signal gets weaker with every AU                 closed: inverse-square law.
                                                        works as intended.
+#42   The Question to the Ultimate Answer              needs-triage
 ```
 
 <details>
@@ -228,7 +258,7 @@ exclude certainty v1.0.0 // incompatible with curiosity
 
 <br>
 
-## 07 · Signal
+## 08 · Signal
 
 Always happy to talk about distributed systems, document AI, mobile products, and anything still doing its job decades after it shipped.
 
@@ -245,6 +275,7 @@ STILL NAVIGATING.
 STILL BUILDING.
 STILL BECOMING.
 
+DON'T PANIC.
 END OF LOG.
 THE EXPEDITION CONTINUES...
 ```
