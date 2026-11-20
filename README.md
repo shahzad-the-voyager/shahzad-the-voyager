@@ -2,8 +2,10 @@
   You opened the source. Good instinct: the interesting parts are usually underneath.
 
   The name is a 41 × 7 one-bit image, revealed one scanline at a time, the way
-  Voyager sent its pictures home: line by line, pixel by pixel. The coral cursor is
-  the next frame, still on its way.
+  Voyager sent its pictures home: line by line, pixel by pixel.
+  The coral dot is a full stop that will not sit still. It beeps at the cadence of
+  Sputnik 1 (1957): 0.3 s on, 0.3 s off, the first signal ever sent from orbit.
+  One word, one full stop, still transmitting.
 
   The trace underneath is not decoration either.
   Left half:  0101 0011 0100 0001  =  0x53 0x41  =  "SA", my initials in ASCII.
@@ -14,16 +16,16 @@
   Voyager 1 still phones home on a transmitter of roughly 23 watts.
   Proof that you can go a very long way on very little power, if you aim well.
 
-  Stolen, with gratitude, from: the Arecibo message (1974), Voyager's line-by-line
-  imaging downlink, the Unix block cursor, and every 1970s datasheet I ever squinted at.
+  Stolen, with gratitude, from: Sputnik's beep (1957), the Arecibo message (1974),
+  Voyager's line-by-line imaging downlink, and every datasheet I ever squinted at.
   Nothing is original. The remix is the work.
 -->
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/downlink-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/downlink-light.svg">
-    <img src="assets/downlink-light.svg" width="100%" alt="SHAHZAD, drawn as a 1-bit dot-matrix image received line by line, with a blinking cursor. Engineer · Voyager · Still transmitting. Below, a single signal trace: the ASCII bits for 'S' and 'A' on the left are modulated onto a radio carrier on the right, which fades as it heads out past Jupiter, Neptune and the heliopause.">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/frame-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/frame-light.svg">
+    <img src="assets/frame-light.svg" width="100%" alt="SHAHZAD, drawn as a 1-bit dot-matrix image received line by line, ending in a coral full stop that beeps like a satellite beacon. Engineer · Voyager · Still transmitting. Below, a single signal trace: the ASCII bits for 'S' and 'A' on the left are modulated onto a radio carrier on the right, which fades as it heads out past Jupiter, Neptune and the heliopause.">
   </picture>
 </p>
 
