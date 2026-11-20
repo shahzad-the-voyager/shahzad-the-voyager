@@ -64,17 +64,17 @@ Until then I ship software, and keep a growing list of questions for the day I'm
 
 ## 02 · Ship's log
 
-Navigators call it *dead reckoning*: you work out where you are from where you've been. These are the ports, in order of departure.
+Voyager 1 reached interstellar space on borrowed momentum: every planet it passed bent its course and flung it further than its own fuel could. My log reads the same way.
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/voyage-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/voyage-light.svg">
-    <img src="assets/voyage-light.svg" width="100%" alt="Ports of call, in order of departure: ML internship (2021.04), AntonX (2021.08), Tripmate (2024.01), Utor (2024.07), CCRIPT (2026, current position). Beyond it, a dashed course into uncharted waters: medicine.">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/journey-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/journey-light.svg">
+    <img src="assets/journey-light.svg" width="100%" alt="A Voyager-style trajectory. Launched from UET Peshawar in 2021, the course gains speed from five flybys: ML internship (2021.04), AntonX (2021.08), Tripmate (2024.01), Utor (2024.07) and CCRIPT (2026), where the probe is now. A dashed course continues past the heliopause into interstellar space: medicine.">
   </picture>
 </p>
 
-<sub>A chart records where a voyage began, not every hour at sea. Some of these voyages overlapped: I have never been good at running one process at a time.</sub>
+<sub>Flybys are plotted by departure date. A few of them overlapped: I have never been good at running one process at a time.</sub>
 
 **`000` The Origin** · UET Peshawar · Class of 2021
 
