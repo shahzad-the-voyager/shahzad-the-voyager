@@ -179,9 +179,9 @@ In 1977 both Voyagers left carrying a golden record: greetings, music and the so
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/record-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/record-light.svg">
-    <img src="assets/record-light.svg" width="100%" alt="A record turning at 16 and two-thirds rpm, Side B, with the stylus in track B5. Now playing: footsteps on a 6.706 km loop, every hour, on the hour. Backyard ultra, Islamabad, December 2026. Last one standing wins.">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/turntable-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/turntable-light.svg">
+    <img src="assets/turntable-light.svg" width="100%" alt="A record turning at 16 and two-thirds rpm, Side B, with the stylus in track B5. Now playing: footsteps on a 6.706 km loop, every hour, on the hour. Backyard ultra, Islamabad, December 2026. Goal: ten loops, 67 km.">
   </picture>
 </p>
 
@@ -193,7 +193,7 @@ In 1977 both Voyagers left carrying a golden record: greetings, music and the so
 | `A4` | Assume the document was photographed sideways. | `B4` | the silence after a clean deploy |
 | `A5` | Boring technology, interesting problems. | **`B5`** | **▶ footsteps on a 6.706 km loop, every hour, on the hour** |
 
-<sub>B5 is a live recording. I am training for a backyard ultra in Islamabad this December: a 6.706 km loop at the top of every hour, for as long as I can keep starting them.</sub>
+<sub>B5 is a live recording. I am training for a backyard ultra in Islamabad this December: a 6.706 km loop at the top of every hour, for as long as you can keep starting them. My goal is ten loops: 67 km in ten hours.</sub>
 
 <br>
 
@@ -225,7 +225,7 @@ Nov 20 02:13:10 earth voyager[1]: warning: scope creep detected, proceeding anyw
 $ crontab -l
 # backyard ultra · Islamabad · December 2026
 # start a 6.706 km loop at the top of every hour. last runner still going wins.
-0 * * * *  run --loop 6.706km --until last-one-standing
+0 * * * *  run --loop 6.706km --goal 10 --until last-one-standing
 ```
 
 ```text
