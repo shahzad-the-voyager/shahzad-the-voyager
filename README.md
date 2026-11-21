@@ -178,12 +178,16 @@ The golden record is what Voyager carries for strangers. This is what I carry fo
 In 1977 both Voyagers left carrying a golden record: greetings, music and the sounds of Earth, for whoever finds the probe. The original's cover explains how to play it, in binary. Mine is pressed at the same 16⅔ rpm, the label below turns at exactly that speed, and its binary is engraved in the run-out groove.
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/turntable-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/turntable-light.svg">
-    <img src="assets/turntable-light.svg" width="100%" alt="A record turning at 16 and two-thirds rpm, Side B, with the stylus in track B5. Now playing: footsteps on a 6.706 km loop, every hour, on the hour. Backyard ultra, Islamabad, December 2026. Goal: ten loops, 67 km.">
-  </picture>
+  <a href="https://www.youtube.com/watch?v=2sSSMKZIoRI" title="Play Side B: Sakura by Eshan Kesari">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/turntable-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/turntable-light.svg">
+      <img src="assets/turntable-light.svg" width="100%" alt="A record turning at 16 and two-thirds rpm, Side B, with the stylus in track B5. Now playing: footsteps on a 6.706 km loop, every hour, on the hour. Backyard ultra, Islamabad, December 2026. Goal: ten loops, 67 km.">
+    </picture>
+  </a>
 </p>
+
+<p align="center"><sub>▶ <b>Side B soundtrack:</b> <i>Sakura</i> by <a href="https://www.youtube.com/@eshankesari2046">Eshan Kesari</a>. Click the record to play.</sub></p>
 
 | | Side A · Flight rules | | Side B · Sounds of Earth |
 | :-: | :-- | :-: | :-- |
