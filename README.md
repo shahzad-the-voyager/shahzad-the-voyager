@@ -175,25 +175,25 @@ The golden record is what Voyager carries for strangers. This is what I carry fo
 
 ## 06 · Golden record
 
-In 1977 both Voyagers left carrying a golden record: greetings, music and the sounds of Earth, for whoever finds the probe. The cover explains how to play it, in binary. Mine is shorter, and its binary is in the header.
+In 1977 both Voyagers left carrying a golden record: greetings, music and the sounds of Earth, for whoever finds the probe. The original's cover explains how to play it, in binary. Mine is pressed at the same 16⅔ rpm, the label below turns at exactly that speed, and its binary is engraved in the run-out groove.
 
-```text
-                          THE GOLDEN RECORD · SA-2021 · 16⅔ RPM
-                          ───────────────────────────────────────────────
-      .-''''''''-.        SIDE A · FLIGHT RULES
-    .'  .------.  '.      A1  Read the logs before you read the code.
-   /   /        \   \     A2  Correct, then observable, then fast.
-  |   |    SA    |   |    A3  Every retry deserves a backoff and a reason.
-  |   |    ()    |   |    A4  Assume the document was photographed sideways.
-   \   \        /   /     A5  Boring technology, interesting problems.
-    '.  '------'  .'
-      '-........-'        SIDE B · SOUNDS OF EARTH
-                          B1  go test -race ./... passing on the first run
-                          B2  a pager going off at 3 a.m.
-                          B3  a hot reload landing in under a second
-                          B4  deployment successfully rolled out
-                          B5  the silence after a clean deploy
-```
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/record-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/record-light.svg">
+    <img src="assets/record-light.svg" width="100%" alt="A record turning at 16 and two-thirds rpm, Side B, with the stylus in track B5. Now playing: footsteps on a 6.706 km loop, every hour, on the hour. Backyard ultra, Islamabad, December 2026. Last one standing wins.">
+  </picture>
+</p>
+
+| | Side A · Flight rules | | Side B · Sounds of Earth |
+| :-: | :-- | :-: | :-- |
+| `A1` | Read the logs before you read the code. | `B1` | `go test -race ./...` passing on the first run |
+| `A2` | Correct, then observable, then fast. | `B2` | a pager going off at 3 a.m. |
+| `A3` | Every retry deserves a backoff and a reason. | `B3` | a hot reload landing in under a second |
+| `A4` | Assume the document was photographed sideways. | `B4` | the silence after a clean deploy |
+| `A5` | Boring technology, interesting problems. | **`B5`** | **▶ footsteps on a 6.706 km loop, every hour, on the hour** |
+
+<sub>B5 is a live recording. I am training for a backyard ultra in Islamabad this December: a 6.706 km loop at the top of every hour, for as long as I can keep starting them.</sub>
 
 <br>
 
@@ -219,6 +219,13 @@ $ systemctl status voyager
 Nov 20 02:13:07 earth voyager[1]: sleep(8h) returned at 5h12m: woken by an idea
 Nov 20 02:13:09 earth voyager[1]: idea: "orbital mechanics, but as a Go library"
 Nov 20 02:13:10 earth voyager[1]: warning: scope creep detected, proceeding anyway
+```
+
+```text
+$ crontab -l
+# backyard ultra · Islamabad · December 2026
+# start a 6.706 km loop at the top of every hour. last runner still going wins.
+0 * * * *  run --loop 6.706km --until last-one-standing
 ```
 
 ```text
