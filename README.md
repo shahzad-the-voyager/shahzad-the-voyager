@@ -66,7 +66,8 @@ The Guide's entry for Earth once read *Harmless*. After fifteen years of field r
 + Found on:     Earth. Launched from Peshawar, 2021.
 + Occupation:   engineer · fintech & AI
 + Logged:       5+ years in production
-+ Runs on:      Go · Flutter · Postgres
++ Backend:      Go · Postgres
++ Mobile:       Swift · iOS native · Flutter
 + Heading:      042°, and holding
 + Destination:  [classified]
 + Field note:   still transmitting.
