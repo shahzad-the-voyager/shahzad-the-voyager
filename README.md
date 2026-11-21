@@ -34,7 +34,7 @@
 </p>
 
 <p align="center">
-  <a href="#01--current-fix">fix</a> ·
+  <a href="#01--guide-entry">guide</a> ·
   <a href="#02--ships-log">log</a> ·
   <a href="#03--engineering-deck">deck</a> ·
   <a href="#04--built-in-public">built</a> ·
@@ -54,24 +54,22 @@ The handle is a standing order. Voyager 1 launched in 1977 on 1970s computers, a
 
 <br>
 
-## 01 · Current fix
+## 01 · Guide entry
 
-```text
-               ENGINEERING
-                ·   N   ·                     CURRENT FIX
-             ·      │      ·                  ────────────────────────────────────
-          ·         │       * ·               position   engineer · fintech & AI
-        ·           │     /     ·             logged     5+ years in production
-      ·             │   /         ·           hands on   Go · Flutter · Postgres
-                    │ /                       heading    042° and holding
-  AI  W ────────────┼──────────── E UNCHARTED bound for  past the heliopause
-                    │                         eta        classified
-      ·             │             ·           power      curiosity · no half-life
-        ·           │           ·
-          ·         │         ·               status     underway
-             ·      │      ·
-                ·   S   ·
-                  MOBILE
+The Guide's entry for Earth once read *Harmless*. After fifteen years of field research, it was expanded to *Mostly harmless*. Mine went through the same review process.
+
+```diff
+@@ The Guide · entry: SHAHZAD @@
+- Harmless.
++ Mostly harmless.
++
++ Found on:     Earth. Launched from Peshawar, 2021.
++ Occupation:   engineer · fintech & AI
++ Logged:       5+ years in production
++ Runs on:      Go · Flutter · Postgres
++ Heading:      042°, and holding
++ Destination:  [classified]
++ Field note:   still transmitting.
 ```
 
 <br>
@@ -205,7 +203,7 @@ $ systemctl status voyager
 ● voyager.service - Shahzad Ahmad: engineer, voyager, still transmitting
      Loaded: loaded (/etc/systemd/system/voyager.service; enabled; preset: curious)
      Active: active (running) since Aug 2021
-     Status: "mostly harmless"
+     Status: "all instruments nominal"
        Docs: man 7 first-principles
    Main PID: 1 (curiosity)
       Tasks: 5 (limit: none configured)
