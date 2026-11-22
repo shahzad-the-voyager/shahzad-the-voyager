@@ -1,0 +1,12 @@
+{
+  "launch": "2021-08",
+  "timezone_offset_hours": 5,
+  "race": {
+    "name": "backyard ultra",
+    "place": "Islamabad",
+    "date": "2026-12-05",
+    "loop_km": 6.706,
+    "goal_loops": 10,
+    "result_loops": null
+  }
+}

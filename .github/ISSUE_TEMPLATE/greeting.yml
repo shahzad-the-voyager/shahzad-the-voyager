@@ -1,0 +1,24 @@
+name: Greetings from Earth
+description: Add a greeting to my golden record, in any language.
+title: "[greeting]"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Voyager's golden record carries spoken greetings in 55 languages. Mine carries yours.
+        Keep it short and friendly. Links and mentions are skipped.
+  - type: input
+    id: language
+    attributes:
+      label: Language
+      placeholder: Urdu
+    validations:
+      required: true
+  - type: input
+    id: greeting
+    attributes:
+      label: Greeting
+      description: Up to 80 characters.
+      placeholder: Peace be with you, from Earth.
+    validations:
+      required: true

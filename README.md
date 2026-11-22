@@ -34,6 +34,14 @@
 </p>
 
 <p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/telemetry-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/telemetry-light.svg">
+    <img src="assets/telemetry-light.svg" width="100%" alt="Live telemetry, refreshed daily: Voyager 1's real distance from Earth from NASA JPL Horizons, and this probe's time in production with a countdown to the backyard ultra.">
+  </picture>
+</p>
+
+<p align="center">
   <a href="#01--guide-entry">guide</a> ·
   <a href="#02--ships-log">log</a> ·
   <a href="#03--engineering-deck">deck</a> ·
@@ -51,6 +59,13 @@ I'm Shahzad. I build software: backend systems in Go, mobile apps in Flutter and
 I trained as a Computer Systems Engineer at UET Peshawar, which means I met computers from the transistor up: gates first, then microprocessors, then everything people build on top of them. I have been travelling up the stack, and outward, ever since.
 
 The handle is a standing order. Voyager 1 launched in 1977 on 1970s computers, and it is still out there, still sending data home. That is the bar: simple enough to keep working, sturdy enough to go further than anyone planned.
+
+```text
+$ cat ~/now                                                    updated Nov 2026
+building   document AI pipelines at CCRIPT
+training   backyard ultra · Islamabad · 5 Dec 2026 · goal: 10 loops
+next       [classified]
+```
 
 <br>
 
@@ -144,6 +159,16 @@ Most of my public code lives under my earlier handle, [**@spacebuckett**](https:
 | [**iOS-development**](https://github.com/spacebuckett/iOS-development) | Weekend SwiftUI projects, including HIKE. | Swift · SwiftUI |
 | [**go-projects**](https://github.com/spacebuckett/go-projects) · [**simplebank**](https://github.com/spacebuckett/simplebank) | The practice range: a timed quiz, a URL shortener and a maze generator, plus a banking backend with sqlc, migrations and CI. | Go · PostgreSQL · GitHub Actions |
 
+Constellation SA: every day of the last year on this account, drawn as a star. Busier days burn brighter, and the busiest day of each week joins the constellation. It is a young sky, because this account launched in November 2026, and it redraws itself every night.
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/constellation-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/constellation-light.svg">
+    <img src="assets/constellation-light.svg" width="100%" alt="Constellation SA: a year of GitHub contributions on this account drawn as a star chart, one star per day, refreshed daily.">
+  </picture>
+</p>
+
 <br>
 
 ## 05 · Onboard library
@@ -194,6 +219,12 @@ In 1977 both Voyagers left carrying a golden record: greetings, music and the so
 | `A5` | Boring technology, interesting problems. | **`B5`** | **▶ footsteps on a 6.706 km loop, every hour, on the hour** |
 
 <sub>B5 is a live recording. I am training for a backyard ultra in Islamabad this December: a 6.706 km loop at the top of every hour, for as long as you can keep starting them. My goal is ten loops: 67 km in ten hours.</sub>
+
+<!-- GREETINGS:START -->
+**Greetings from Earth** · 0 received · 0 languages · [add yours →](https://github.com/shahzad-the-voyager/shahzad-the-voyager/issues/new?template=greeting.yml)
+
+<sub>The first slot on the record is still open.</sub>
+<!-- GREETINGS:END -->
 
 <br>
 
@@ -266,11 +297,15 @@ exclude certainty v1.0.0 // incompatible with curiosity
 
 ## 08 · Signal
 
-Always happy to talk about distributed systems, document AI, mobile products, and anything still doing its job decades after it shipped.
+Always happy to talk about distributed systems, document AI, mobile products, and anything still doing its job decades after it shipped. Pick a station.
 
-**GitHub** · you are here · earlier work at [github.com/spacebuckett](https://github.com/spacebuckett)
-<!-- TODO(shahzad): add your LinkedIn here, e.g. **LinkedIn** · [linkedin.com/in/your-handle](https://www.linkedin.com/in/your-handle) -->
-<!-- TODO(shahzad): add a contact email here if you want one public -->
+| Station | Channel | Status |
+| :-- | :-- | :-- |
+| **GitHub** | [github.com/shahzad-the-voyager](https://github.com/shahzad-the-voyager) | ● locked · you are here |
+| **Archive** | [github.com/spacebuckett](https://github.com/spacebuckett) | ● open · earlier work, most public code |
+| **Email** | [shahzad.the.builder@gmail.com](mailto:shahzad.the.builder@gmail.com) | ● open · replies within a light-day |
+| **LinkedIn** | not launched yet | ○ on the pad |
+| **Greetings** | [leave one on the golden record](https://github.com/shahzad-the-voyager/shahzad-the-voyager/issues/new?template=greeting.yml) | ● open · any language |
 
 <br>
 
