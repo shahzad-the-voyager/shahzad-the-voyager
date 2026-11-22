@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 246" width="68" height="246" role="img" aria-label="ROM 02: The Hitchhiker&#x27;s Guide to the Galaxy">
+  <style>
+    .t { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
+    .blink { animation: blink 1.6s steps(1) 1s infinite; }
+    @keyframes blink { 50% { opacity: .2; } }
+    @media (prefers-reduced-motion: reduce) { .blink { animation: none; } }
+  </style>
+  <line x1="0" y1="214.75" x2="68" y2="214.75" stroke="#8b949e" stroke-width="1.5"/>
+  <rect x="9.0" y="18" width="50" height="196" rx="2" fill="#ff7b72"/><text x="34.0" y="116.0" transform="rotate(90 34.0 116.0)" text-anchor="middle" dominant-baseline="central" class="t" font-size="17" font-weight="700" letter-spacing="1.5" fill="#0d1117">DON&#39;T PANIC</text><path d="M 2.0 52 L 4.0 15 Q 34.0 9 64.0 15 L 66.0 44 L 57.0 42 L 57.0 23 Q 34.0 19 11.0 23 L 11.0 51 Z" fill="#58a6ff"/><line x1="3.5" y1="32" x2="10.0" y2="32" stroke="#0d1117" stroke-width="1.6"/><line x1="58.0" y1="28" x2="64.5" y2="28" stroke="#0d1117" stroke-width="1.6"/><line x1="3.5" y1="39" x2="10.0" y2="39" stroke="#0d1117" stroke-width="1.6"/><line x1="58.0" y1="35" x2="64.5" y2="35" stroke="#0d1117" stroke-width="1.6"/><circle cx="21.0" cy="233" r="2.6" fill="#58a6ff"/><text x="39.0" y="237" text-anchor="middle" class="t" font-size="10.5" letter-spacing="1" fill="#8b949e">02</text>
+</svg>

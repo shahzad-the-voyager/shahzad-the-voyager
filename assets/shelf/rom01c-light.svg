@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.5 246" width="40.5" height="246" role="img" aria-label="ROM 01: Steal Like an Artist · Show Your Work! · Keep Going">
+  <style>
+    .t { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
+    .blink { animation: blink 1.6s steps(1) 1s infinite; }
+    @keyframes blink { 50% { opacity: .2; } }
+    @media (prefers-reduced-motion: reduce) { .blink { animation: none; } }
+  </style>
+  <line x1="0" y1="214.75" x2="40.5" y2="214.75" stroke="#59636e" stroke-width="1.5"/>
+  <rect x="1.5" y="44" width="30" height="170" rx="2" fill="#f6f8fa" stroke="#59636e" stroke-width="1.3"/><line x1="5.5" y1="53" x2="27.5" y2="53" stroke="#0969da" stroke-width="2"/><text x="16.5" y="62" transform="rotate(90 16.5 62)" dominant-baseline="central" class="t" font-size="10.5" font-weight="700" letter-spacing="0.6" fill="#1f2328">KEEP GOING</text>
+</svg>

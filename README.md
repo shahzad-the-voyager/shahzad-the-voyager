@@ -175,24 +175,105 @@ Constellation SA: every day of the last year on this account, drawn as a star. B
 
 The golden record is what Voyager carries for strangers. This is what I carry for myself: the books that rewrote parts of my firmware. Austin Kleon would call it a swipe file, so I don't list what I read. I list what I stole.
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/library-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/library-light.svg">
-    <img src="assets/library-light.svg" width="100%" alt="A shelf of book spines drawn as read-only memory modules, numbered 01 to 08, with two open slots. The Hitchhiker's Guide is a coral spine reading DON'T PANIC, with a towel draped over it. The three Illuminae Files spines each carry a redaction bar.">
-  </picture>
-</p>
+<p align="center"><a href="#rom-01" title="ROM 01 · Steal Like an Artist · Show Your Work! · Keep Going: Nothing is original. Credit your sources and show the process."><picture><source media="(prefers-color-scheme: dark)" srcset="assets/shelf/rom01a-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/shelf/rom01a-light.svg"><img src="assets/shelf/rom01a-light.svg" width="4.772%" alt="ROM 01: Steal Like an Artist · Show Your Work! · Keep Going" title="ROM 01 · Steal Like an Artist · Show Your Work! · Keep Going: Nothing is original. Credit your sources and show the process."></picture></a><a href="#rom-01" title="ROM 01 · Steal Like an Artist · Show Your Work! · Keep Going: Nothing is original. Credit your sources and show the process."><picture><source media="(prefers-color-scheme: dark)" srcset="assets/shelf/rom01b-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/shelf/rom01b-light.svg"><img src="assets/shelf/rom01b-light.svg" width="4.701%" alt="ROM 01: Steal Like an Artist · Show Your Work! · Keep Going" title="ROM 01 · Steal Like an Artist · Show Your Work! · Keep Going: Nothing is original. Credit your sources and show the process."></picture></a><a href="#rom-01" title="ROM 01 · Steal Like an Artist · Show Your Work! · Keep Going: Nothing is original. Credit your sources and show the process."><picture><source media="(prefers-color-scheme: dark)" srcset="assets/shelf/rom01c-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/shelf/rom01c-light.svg"><img src="assets/shelf/rom01c-light.svg" width="5.769%" alt="ROM 01: Steal Like an Artist · Show Your Work! · Keep Going" title="ROM 01 · Steal Like an Artist · Show Your Work! · Keep Going: Nothing is original. Credit your sources and show the process."></picture></a><a href="#rom-02" title="ROM 02 · The Hitchhiker&#x27;s Guide to the Galaxy: DON&#x27;T PANIC, in large friendly letters, is still the best first line for an incident runbook."><picture><source media="(prefers-color-scheme: dark)" srcset="assets/shelf/rom02-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/shelf/rom02-light.svg"><img src="assets/shelf/rom02-light.svg" width="9.687%" alt="ROM 02: The Hitchhiker&#x27;s Guide to the Galaxy" title="ROM 02 · The Hitchhiker&#x27;s Guide to the Galaxy: DON&#x27;T PANIC, in large friendly letters, is still the best first line for an incident runbook."></picture></a><a href="#rom-03" title="ROM 03 · Psycho-Cybernetics: A person works like a servo: set the target, read the error, correct. Same loop as a thermostat."><picture><source media="(prefers-color-scheme: dark)" srcset="assets/shelf/rom03-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/shelf/rom03-light.svg"><img src="assets/shelf/rom03-light.svg" width="8.262%" alt="ROM 03: Psycho-Cybernetics" title="ROM 03 · Psycho-Cybernetics: A person works like a servo: set the target, read the error, correct. Same loop as a thermostat."></picture></a><a href="#rom-04" title="ROM 04 · The Illuminae Files: A whole story told through logs, transcripts and redacted files. Write your logs as if someone will rebuild the story from them, because someone will."><picture><source media="(prefers-color-scheme: dark)" srcset="assets/shelf/rom04a-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/shelf/rom04a-light.svg"><img src="assets/shelf/rom04a-light.svg" width="7.194%" alt="ROM 04: The Illuminae Files" title="ROM 04 · The Illuminae Files: A whole story told through logs, transcripts and redacted files. Write your logs as if someone will rebuild the story from them, because someone will."></picture></a><a href="#rom-04" title="ROM 04 · The Illuminae Files: A whole story told through logs, transcripts and redacted files. Write your logs as if someone will rebuild the story from them, because someone will."><picture><source media="(prefers-color-scheme: dark)" srcset="assets/shelf/rom04b-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/shelf/rom04b-light.svg"><img src="assets/shelf/rom04b-light.svg" width="6.125%" alt="ROM 04: The Illuminae Files" title="ROM 04 · The Illuminae Files: A whole story told through logs, transcripts and redacted files. Write your logs as if someone will rebuild the story from them, because someone will."></picture></a><a href="#rom-04" title="ROM 04 · The Illuminae Files: A whole story told through logs, transcripts and redacted files. Write your logs as if someone will rebuild the story from them, because someone will."><picture><source media="(prefers-color-scheme: dark)" srcset="assets/shelf/rom04c-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/shelf/rom04c-light.svg"><img src="assets/shelf/rom04c-light.svg" width="7.194%" alt="ROM 04: The Illuminae Files" title="ROM 04 · The Illuminae Files: A whole story told through logs, transcripts and redacted files. Write your logs as if someone will rebuild the story from them, because someone will."></picture></a><a href="#rom-05" title="ROM 05 · Harry Potter: The Marauder&#x27;s Map is the best monitoring dashboard ever imagined: every entity, live, on one screen."><picture><source media="(prefers-color-scheme: dark)" srcset="assets/shelf/rom05-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/shelf/rom05-light.svg"><img src="assets/shelf/rom05-light.svg" width="8.262%" alt="ROM 05: Harry Potter" title="ROM 05 · Harry Potter: The Marauder&#x27;s Map is the best monitoring dashboard ever imagined: every entity, live, on one screen."></picture></a><a href="#rom-06" title="ROM 06 · Algorithms to Live By: Explore versus exploit, and knowing when to stop searching."><picture><source media="(prefers-color-scheme: dark)" srcset="assets/shelf/rom06-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/shelf/rom06-light.svg"><img src="assets/shelf/rom06-light.svg" width="7.977%" alt="ROM 06: Algorithms to Live By" title="ROM 06 · Algorithms to Live By: Explore versus exploit, and knowing when to stop searching."></picture></a><a href="#rom-07" title="ROM 07 · Thinking, Fast and Slow: The fast mind writes the first draft and the slow mind reviews it. That is code review."><picture><source media="(prefers-color-scheme: dark)" srcset="assets/shelf/rom07-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/shelf/rom07-light.svg"><img src="assets/shelf/rom07-light.svg" width="8.262%" alt="ROM 07: Thinking, Fast and Slow" title="ROM 07 · Thinking, Fast and Slow: The fast mind writes the first draft and the slow mind reviews it. That is code review."></picture></a><a href="#rom-08" title="ROM 08 · Before the Coffee Gets Cold: You can visit the past but never change it. Those are the café&#x27;s rules, and git&#x27;s."><picture><source media="(prefers-color-scheme: dark)" srcset="assets/shelf/rom08-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/shelf/rom08-light.svg"><img src="assets/shelf/rom08-light.svg" width="7.692%" alt="ROM 08: Before the Coffee Gets Cold" title="ROM 08 · Before the Coffee Gets Cold: You can visit the past but never change it. Those are the café&#x27;s rules, and git&#x27;s."></picture></a><picture><source media="(prefers-color-scheme: dark)" srcset="assets/shelf/slot09-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/shelf/slot09-light.svg"><img src="assets/shelf/slot09-light.svg" width="7.692%" alt="Open slot 09" title="Slot 09 is open. Recommendations welcome."></picture><picture><source media="(prefers-color-scheme: dark)" srcset="assets/shelf/slot10-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/shelf/slot10-light.svg"><img src="assets/shelf/slot10-light.svg" width="6.410%" alt="Open slot 10" title="Slot 10 is open. Recommendations welcome."></picture></p>
 
-| ROM | Book | What I stole |
-| :-: | :-- | :-- |
-| `01` | **Steal Like an Artist · Show Your Work! · Keep Going** · Austin Kleon | Nothing is original. Credit your sources and show the process. It is why this README lists its influences. |
-| `02` | **The Hitchhiker's Guide to the Galaxy** · Douglas Adams | DON'T PANIC, in large friendly letters, is still the best first line for an incident runbook. |
-| `03` | **Psycho-Cybernetics** · Maxwell Maltz | A person works like a servo: set the target, read the error, correct. Same loop as a thermostat. |
-| `04` | **The Illuminae Files** · Amie Kaufman & Jay Kristoff | A whole story told through logs, transcripts and redacted files. Write your logs as if someone will rebuild the story from them, because someone will. |
-| `05` | **Harry Potter** · J.K. Rowling | The Marauder's Map is the best monitoring dashboard ever imagined: every entity, live, on one screen. |
-| `06` | **Algorithms to Live By** · Brian Christian & Tom Griffiths | Explore versus exploit, and knowing when to stop searching. |
-| `07` | **Thinking, Fast and Slow** · Daniel Kahneman | The fast mind writes the first draft and the slow mind reviews it. That is code review. |
-| `08` | **Before the Coffee Gets Cold** · Toshikazu Kawaguchi | You can visit the past but never change it. Those are the café's rules, and git's. |
+<p align="center"><sub>Hover a spine to read what I stole from it. Click it to pull its card.</sub></p>
+
+<details>
+<summary><a name="rom-01"></a><code>ROM 01</code> · <b>Steal Like an Artist · Show Your Work! · Keep Going</b> · Austin Kleon</summary>
+<br>
+
+> Nothing is original. Credit your sources and show the process.
+
+**Where it runs:** The hidden credits at the top of this README, and every “stolen from” in it.
+
+<sub><code>LOADED · READ-ONLY · 0x01</code></sub>
+
+</details>
+
+<details>
+<summary><a name="rom-02"></a><code>ROM 02</code> · <b>The Hitchhiker&#x27;s Guide to the Galaxy</b> · Douglas Adams</summary>
+<br>
+
+> DON'T PANIC, in large friendly letters, is still the best first line for an incident runbook.
+
+**Where it runs:** Section 01, the 042° heading, and issue #42, still in triage.
+
+<sub><code>LOADED · READ-ONLY · 0x02</code></sub>
+
+</details>
+
+<details>
+<summary><a name="rom-03"></a><code>ROM 03</code> · <b>Psycho-Cybernetics</b> · Maxwell Maltz</summary>
+<br>
+
+> A person works like a servo: set the target, read the error, correct. Same loop as a thermostat.
+
+**Where it runs:** The telemetry strip: target set for 5 December, error read every night, course corrected.
+
+<sub><code>LOADED · READ-ONLY · 0x03</code></sub>
+
+</details>
+
+<details>
+<summary><a name="rom-04"></a><code>ROM 04</code> · <b>The Illuminae Files</b> · Amie Kaufman &amp; Jay Kristoff</summary>
+<br>
+
+> A whole story told through logs, transcripts and redacted files. Write your logs as if someone will rebuild the story from them, because someone will.
+
+**Where it runs:** The Diagnostics section, and the redacted destination on the Ship's log.
+
+<sub><code>LOADED · READ-ONLY · 0x04</code></sub>
+
+</details>
+
+<details>
+<summary><a name="rom-05"></a><code>ROM 05</code> · <b>Harry Potter</b> · J.K. Rowling</summary>
+<br>
+
+> The Marauder's Map is the best monitoring dashboard ever imagined: every entity, live, on one screen.
+
+**Where it runs:** Constellation SA, which maps every day of the year onto one sky.
+
+<sub><code>LOADED · READ-ONLY · 0x05</code></sub>
+
+</details>
+
+<details>
+<summary><a name="rom-06"></a><code>ROM 06</code> · <b>Algorithms to Live By</b> · Brian Christian &amp; Tom Griffiths</summary>
+<br>
+
+> Explore versus exploit, and knowing when to stop searching.
+
+**Where it runs:** Slots 09 and 10 on this shelf, left open on purpose: some exploration stays in the budget.
+
+<sub><code>LOADED · READ-ONLY · 0x06</code></sub>
+
+</details>
+
+<details>
+<summary><a name="rom-07"></a><code>ROM 07</code> · <b>Thinking, Fast and Slow</b> · Daniel Kahneman</summary>
+<br>
+
+> The fast mind writes the first draft and the slow mind reviews it. That is code review.
+
+**Where it runs:** grumpy-senior-code-reviewer: a slow, grounded second opinion on fast first drafts.
+
+<sub><code>LOADED · READ-ONLY · 0x07</code></sub>
+
+</details>
+
+<details>
+<summary><a name="rom-08"></a><code>ROM 08</code> · <b>Before the Coffee Gets Cold</b> · Toshikazu Kawaguchi</summary>
+<br>
+
+> You can visit the past but never change it. Those are the café's rules, and git's.
+
+**Where it runs:** The Ship's log, which only ever gets new entries. History is append-only.
+
+<sub><code>LOADED · READ-ONLY · 0x08</code></sub>
+
+</details>
 
 <sub>Slots 09 and 10 are open. Recommendations welcome.</sub>
 
