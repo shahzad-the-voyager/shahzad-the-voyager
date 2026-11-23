@@ -301,6 +301,16 @@ In 1977 both Voyagers left carrying a golden record: greetings, music and the so
 
 <sub>B5 is a live recording. I am training for a backyard ultra in Islamabad this December: a 6.706 km loop at the top of every hour, for as long as you can keep starting them. My goal is ten loops: 67 km in ten hours.</sub>
 
+Track B5 is still being recorded. Every training run is a take, logged the day it happens, and the master gets recorded on 5 December.
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/training-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/training-light.svg">
+    <img src="assets/training-light.svg" width="100%" alt="Track B5 recording sessions: a countdown to the backyard ultra on 5 December 2026, a calendar of training runs shown as takes with bars for each kilometre split, and the latest take in detail.">
+  </picture>
+</p>
+
 <!-- GREETINGS:START -->
 **Greetings from Earth** · 0 received · 0 languages · [add yours →](https://github.com/shahzad-the-voyager/shahzad-the-voyager/issues/new?template=greeting.yml)
 
