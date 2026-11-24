@@ -34,8 +34,9 @@ def bars(x, y, w, h, paces, t, color, labels=False):
     fast, slow = min(paces), max(paces)
     span = max(slow - fast, 1)
     n = len(paces)
-    gap = 3 if n < 12 else 1.5
+    gap = max(1, min(3, w / n * 0.25))
     bw = (w - gap * (n - 1)) / n
+    pace_fs = 11 if bw >= 32 else 9.5
     out = []
     for i, p in enumerate(paces):
         frac = 0.35 + 0.65 * (slow - p) / span
@@ -45,10 +46,12 @@ def bars(x, y, w, h, paces, t, color, labels=False):
         out.append(f'<rect x="{bx:.1f}" y="{y + h - bh:.1f}" width="{bw:.1f}" height="{bh:.1f}" rx="1.5" '
                    f'fill="{t["red"] if best else color}" opacity="{1 if best else .85}"/>')
         if labels:
-            out.append(f'<text x="{bx + bw / 2:.1f}" y="{y + h - bh - 8:.1f}" text-anchor="middle" class="t" font-size="11" '
-                       f'fill="{t["red"] if best else t["fg"]}">{mmss(p)}</text>')
+            if bw >= 24 or best or p == slow:
+                out.append(f'<text x="{bx + bw / 2:.1f}" y="{y + h - bh - 8:.1f}" text-anchor="middle" class="t" font-size="{pace_fs}" '
+                           f'fill="{t["red"] if best else t["fg"]}">{mmss(p)}</text>')
+            km = f"KM {i + 1}" if bw >= 38 else f"{i + 1}"
             out.append(f'<text x="{bx + bw / 2:.1f}" y="{y + h + 16:.1f}" text-anchor="middle" class="t" font-size="9.5" '
-                       f'letter-spacing="1" fill="{t["faint"]}">KM {i + 1}</text>')
+                       f'letter-spacing="1" fill="{t["faint"]}">{km}</text>')
     return "".join(out)
 
 
@@ -116,13 +119,23 @@ def render(t, mission, runs, today):
             note = " · FASTEST KM LAST ▲"
         head = (f'LATEST · TAKE {take_no[latest["date"]]:02d} · {ld} · {latest["km"]:.2f} KM · {mmss(latest["total"])} · '
                 f'AVG {mmss(latest["avg"])} /KM{note}')
-        gap_txt = ""
+        bw = min(560, max(360, len(latest["paces"]) * 44))
+        rx = CELL_X0 + bw + 40
+        side = []
         if latest["gap"]:
-            gap_txt = "GRADE-ADJUSTED: " + " · ".join(mmss(g) for g in latest["gap"])
+            side.append("GRADE-ADJUSTED /KM")
+            g = [mmss(v) for v in latest["gap"]]
+            per = max(1, int((W - CELL_X0 - rx) // 49))
+            rows = [" · ".join(g[k:k + per]) for k in range(0, len(g), per)]
+            if len(rows) > 2:
+                rows = [f"AVG {mmss(sum(latest['gap']) / len(latest['gap']))} · BEST {mmss(min(latest['gap']))}"]
+            side += rows
+        side.append("TALLER BAR = FASTER KM · CORAL = FASTEST")
+        y0 = 370 - (len(side) - 1) * 16
         detail = (f'<text x="{CELL_X0}" y="300" class="t" font-size="11" letter-spacing="1.5" fill="{t["muted"]}">{esc(head)}</text>'
-                  + bars(CELL_X0, 326, 360, 44, latest["paces"], t, t["blue"], labels=True)
-                  + f'<text x="{CELL_X0 + 390}" y="350" class="t" font-size="10" letter-spacing="1" fill="{t["faint"]}">{esc(gap_txt)}</text>'
-                  + f'<text x="{CELL_X0 + 390}" y="368" class="t" font-size="10" letter-spacing="1" fill="{t["faint"]}">TALLER BAR = FASTER KM · CORAL = FASTEST</text>')
+                  + bars(CELL_X0, 326, bw, 44, latest["paces"], t, t["blue"], labels=True)
+                  + "".join(f'<text x="{rx}" y="{y0 + k * 16}" class="t" font-size="10" letter-spacing="1" fill="{t["faint"]}">{esc(line)}</text>'
+                            for k, line in enumerate(side)))
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-labelledby="title desc">
   <title id="title">B5 recording sessions: training for the backyard ultra</title>
