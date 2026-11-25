@@ -301,7 +301,7 @@ In 1977 both Voyagers left carrying a golden record: greetings, music and the so
 
 <sub>B5 is a live recording. I am training for a backyard ultra in Islamabad this December: a 6.706 km loop at the top of every hour, for as long as you can keep starting them. My goal is ten loops: 67 km in ten hours.</sub>
 
-Track B5 is still being recorded. Every training run is a take, logged the day it happens, and the master gets recorded on 5 December.
+Track B5 is still being recorded. Every training run is a take, logged the day it happens, and the master gets recorded on 5 December. Rest days go into the score as rests, because a song without them is just noise.
 
 <p align="center">
   <picture>

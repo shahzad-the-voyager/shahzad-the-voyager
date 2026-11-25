@@ -55,14 +55,28 @@ def bars(x, y, w, h, paces, t, color, labels=False):
     return "".join(out)
 
 
-def render(t, mission, runs, today):
+def rest_cell(x, cw, rest, t):
+    cx = x + cw / 2
+    g = [f'<rect x="{x:.1f}" y="{CELL_Y}" width="{cw:.1f}" height="{CELL_H}" rx="4" fill="{t["body"]}" stroke="{t["edge"]}" stroke-width="1.2"/>']
+    for k in range(5):
+        yy = CELL_Y + 14 + k * 6
+        g.append(f'<line x1="{x + 8:.1f}" y1="{yy}" x2="{x + cw - 8:.1f}" y2="{yy}" stroke="{t["faint"]}" stroke-width=".8" opacity=".7"/>')
+    g.append(f'<rect x="{cx - 7:.1f}" y="{CELL_Y + 26 - 5}" width="14" height="5" fill="{t["fg"]}"/>')
+    for k, c in enumerate(rest["cross"][:2]):
+        g.append(f'<text x="{cx:.1f}" y="{CELL_Y + 56 + k * 12}" text-anchor="middle" class="t" font-size="8.5" letter-spacing=".8" fill="{t["muted"]}">{esc(c["kind"].upper())} {c["min"]}M</text>')
+    g.append(f'<text x="{cx:.1f}" y="{CELL_Y + 84}" text-anchor="middle" class="t" font-size="8.5" font-weight="700" letter-spacing="1" fill="{t["fg"]}">REST</text>')
+    return "".join(g)
+
+
+def render(t, mission, runs, today, rests=()):
     race = mission["race"]
     race_day = dt.date.fromisoformat(race["date"])
     loop_km = race["loop_km"]
     goal = race["goal_loops"]
     days_left = (race_day - today).days
     by_date = {r["date"]: r for r in runs}
-    start = min([r["date"] for r in runs] + [today])
+    by_rest = {r["date"]: r for r in rests}
+    start = min([r["date"] for r in runs] + [r["date"] for r in rests] + [today])
     ndays = (race_day - start).days + 1
     cells = []
     take_no = {r["date"]: i + 1 for i, r in enumerate(sorted(runs, key=lambda r: r["date"]))}
@@ -84,6 +98,8 @@ def render(t, mission, runs, today):
             g.append(bars(x + 8, CELL_Y + 12, cw - 16, 40, r["paces"], t, t["blue"]))
             g.append(f'<text x="{x + cw / 2:.1f}" y="{CELL_Y + 70}" text-anchor="middle" class="t" font-size="11" font-weight="700" fill="{t["fg"]}">{r["km"]:.1f}K</text>')
             g.append(f'<text x="{x + cw / 2:.1f}" y="{CELL_Y + 84}" text-anchor="middle" class="t" font-size="8.5" letter-spacing="1" fill="{t["muted"]}">TAKE {take_no[d]:02d}</text>')
+        elif d in by_rest:
+            g.append(rest_cell(x, cw, by_rest[d], t))
         elif d < today:
             g.append(f'<rect x="{x:.1f}" y="{CELL_Y}" width="{cw:.1f}" height="{CELL_H}" rx="4" fill="none" stroke="{t["line"]}" stroke-width="1.2"/>')
             g.append(f'<text x="{x + cw / 2:.1f}" y="{CELL_Y + 50}" text-anchor="middle" class="t" font-size="9" letter-spacing="1.5" fill="{t["faint"]}">REST</text>')
@@ -102,7 +118,8 @@ def render(t, mission, runs, today):
         count, count_lbl = "T−0", "THE MASTER TAKE IS TODAY"
     else:
         count, count_lbl = "DONE", "THE MASTER TAKE IS RECORDED"
-    stats = [f"{len(runs)} {'TAKE' if len(runs) == 1 else 'TAKES'} · {logged:.1f} KM LOGGED · {logged / loop_km:.2f} RACE LOOPS"]
+    rest_txt = f" · {len(rests)} {'REST' if len(rests) == 1 else 'RESTS'}" if rests else ""
+    stats = [f"{len(runs)} {'TAKE' if len(runs) == 1 else 'TAKES'}{rest_txt} · {logged:.1f} KM LOGGED · {logged / loop_km:.2f} RACE LOOPS"]
     if best_avg:
         loop_t = best_avg * loop_km
         stats.append(f"BEST AVG {mmss(best_avg)} /KM → ONE {loop_km} KM LOOP IN {mmss(loop_t)}")
@@ -139,7 +156,7 @@ def render(t, mission, runs, today):
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-labelledby="title desc">
   <title id="title">B5 recording sessions: training for the backyard ultra</title>
-  <desc id="desc">{esc(count)} {esc(count_lbl.lower())}, {race_day.strftime("%d %B %Y")} in {esc(race["place"])}. {esc(". ".join(stats))}. Each training run is a take, shown as bars of its kilometre splits.</desc>
+  <desc id="desc">{esc(count)} {esc(count_lbl.lower())}, {race_day.strftime("%d %B %Y")} in {esc(race["place"])}. {esc(". ".join(stats))}. Each training run is a take, shown as bars of its kilometre splits. Rest days are written into the score as rests.</desc>
   <style>
     .t {{ font-family: {FONT}; }}
     .now {{ animation: now 1.4s ease-in-out infinite; }}
@@ -153,7 +170,7 @@ def render(t, mission, runs, today):
   {stat_svg}
   {"".join(cells)}
   {detail}
-  <text x="{W - CELL_X0}" y="{H - 8}" text-anchor="end" class="t" font-size="8.5" letter-spacing="1.5" fill="{t["faint"]}">EVERY RUN IS A TAKE · UPDATED {today.isoformat()}</text>
+  <text x="{W - CELL_X0}" y="{H - 8}" text-anchor="end" class="t" font-size="8.5" letter-spacing="1.5" fill="{t["faint"]}">EVERY RUN IS A TAKE · EVERY REST IS IN THE SCORE · UPDATED {today.isoformat()}</text>
 </svg>
 '''
 
@@ -162,11 +179,13 @@ def main():
     with open(path("data", "mission.json"), encoding="utf-8") as f:
         mission = json.load(f)
     with open(path("data", "training.json"), encoding="utf-8") as f:
-        runs = [summarize(r) for r in json.load(f)["runs"]]
+        log = json.load(f)
+    runs = [summarize(r) for r in log["runs"]]
+    rests = [dict(r, date=dt.date.fromisoformat(r["date"])) for r in log.get("rests", [])]
     now = dt.datetime.now(dt.timezone.utc) + dt.timedelta(hours=mission["timezone_offset_hours"])
     today = now.date()
-    write_themed("training", lambda t: render(t, mission, runs, today))
-    print(json.dumps({"runs": len(runs), "today": today.isoformat()}))
+    write_themed("training", lambda t: render(t, mission, runs, today, rests))
+    print(json.dumps({"runs": len(runs), "rests": len(rests), "today": today.isoformat()}))
 
 
 if __name__ == "__main__":
