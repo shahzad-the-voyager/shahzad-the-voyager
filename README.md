@@ -62,7 +62,7 @@ The handle is a standing order. Voyager 1 launched in 1977 on 1970s computers, a
 
 ```text
 $ cat ~/now                                                    updated Nov 2026
-building   document AI pipelines at CCRIPT
+building   document AI pipelines · codename FAR SIDE
 training   backyard ultra · Islamabad · 5 Dec 2026 · goal: 10 loops
 next       [classified]
 ```
@@ -96,9 +96,9 @@ Voyager 1 reached interstellar space on borrowed momentum: every planet it passe
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/course-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/course-light.svg">
-    <img src="assets/course-light.svg" width="100%" alt="A Voyager-style trajectory. Launched from UET Peshawar in 2021, the course gains speed from five flybys: ML internship (2021.04), AntonX (2021.08), Tripmate (2024.01), Utor (2024.07) and CCRIPT (2026), where the probe is now. A dashed course continues past the heliopause into interstellar space. The destination is redacted.">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/course2-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/course2-light.svg">
+    <img src="assets/course2-light.svg" width="100%" alt="A Voyager-style trajectory. Launched from UET Peshawar in 2021, the course gains speed from five flybys: ML internship (2021.04), AntonX (2021.08), Tripmate (2024.01), Utor (2024.07) and FAR SIDE (2026, a codename), where the probe is now. A dashed course continues past the heliopause into interstellar space. The destination is redacted.">
   </picture>
 </p>
 
@@ -124,9 +124,11 @@ A travel product built around maps: Flutter, Mapbox and Firebase, shipped to iOS
 
 Mobile products across several startups: Frich (Series A, ~$2M raised), Arête, Auura AI and BhogAI. Different domains, one recurring lesson: a phone is a small distributed system that its user can drop in a puddle.
 
-**`005` Money, Documents & Machines That Read** · CCRIPT · 2026 – present
+**`005` Money, Documents & Machines That Read** · FAR SIDE *(codename)* · 2026 – present
 
-Fintech and mortgage technology for Nexa Lending and bevri.ai: borrower onboarding, POS and LOS integrations, intelligent document processing and AI-assisted workflows, running on Google Cloud with Go, PostgreSQL, Cloud Run, GitHub Actions, Stripe and OAuth. The documents arrive as pay stubs, bank statements, tax forms, and the occasional photo taken at an angle that suggests a moving vehicle. The software has to read all of them correctly, because someone's home depends on it.
+Fintech and mortgage technology for a lender and an AI product I can't name yet: borrower onboarding, POS and LOS integrations, intelligent document processing and AI-assisted workflows, running on Google Cloud with Go, PostgreSQL, Cloud Run, GitHub Actions, Stripe and OAuth. The documents arrive as pay stubs, bank statements, tax forms, and the occasional photo taken at an angle that suggests a moving vehicle. The software has to read all of them correctly, because someone's home depends on it.
+
+The names stay on the far side for now. Like the far side of the Moon, it's there, it's busy, and it's out of radio contact until the mission says otherwise.
 
 **`006` Beyond the Heliopause** · destination classified · *the log resumes on arrival*
 

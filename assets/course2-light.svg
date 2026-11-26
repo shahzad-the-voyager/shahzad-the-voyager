@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 352" width="960" height="352" role="img" aria-labelledby="title desc">
+  <title id="title">Ship's log: a Voyager-style trajectory</title>
+  <desc id="desc">A mission trajectory diagram. Launched from the origin, UET Peshawar in 2021, the course gains speed from five flybys, like gravity assists: ML internship (2021.04), AntonX (2021.08), Tripmate (2024.01), Utor (2024.07) and FAR SIDE (2026, a codename), where the probe is now. A dashed course continues across the heliopause into interstellar space. The destination is redacted: classified.</desc>
+  <defs>
+    <linearGradient id="trail" gradientUnits="userSpaceOnUse" x1="66" y1="0" x2="716" y2="0">
+      <stop offset="0" stop-color="#0969da"/><stop offset=".68" stop-color="#0969da"/>
+      <stop offset=".95" stop-color="#cf222e"/><stop offset="1" stop-color="#cf222e"/>
+    </linearGradient>
+    <clipPath id="sky"><rect x="0" y="46" width="960" height="214"/></clipPath>
+  </defs>
+  <style>
+    .t { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
+    .trail { fill: none; stroke: url(#trail); stroke-width: 2.2; stroke-linecap: round;
+      stroke-dasharray: 1; stroke-dashoffset: 0; animation: draw 3.6s cubic-bezier(.5,0,.3,1) .4s backwards; }
+    .beyond { fill: none; stroke: #cf222e; stroke-width: 1.6; stroke-dasharray: 3 6; stroke-linecap: round; opacity: .8; }
+    .body { animation: in .6s ease-out backwards; }
+    .late { animation: in 1s ease-out 4s backwards; }
+    .ping { fill: none; stroke: #cf222e; stroke-width: 1.6; opacity: 0; transform-box: fill-box; transform-origin: center;
+      animation: ping 2.5s ease-out 4s infinite; }
+    @keyframes draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+    @keyframes in { from { opacity: 0; } }
+    @keyframes ping { 0% { opacity: .9; transform: scale(1); } 100% { opacity: 0; transform: scale(3.6); } }
+    @media (prefers-reduced-motion: reduce) {
+      .trail, .body, .late { animation: none; }
+      .ping { animation: none; display: none; }
+    }
+  </style>
+  <text x="20" y="30" class="t" font-size="12" letter-spacing="3" fill="#59636e">SHIP'S LOG // TRAJECTORY</text>
+  <text x="940" y="30" text-anchor="end" class="t" font-size="12" letter-spacing="2" fill="#59636e">5 FLYBYS · HEADING 042°</text>
+  <g clip-path="url(#sky)"><circle cx="66" cy="252" r="130.5" fill="none" stroke="#d8dee4" stroke-width="1" stroke-dasharray="2 5"/><circle cx="66" cy="252" r="261.5" fill="none" stroke="#d8dee4" stroke-width="1" stroke-dasharray="2 5"/><circle cx="66" cy="252" r="393.7" fill="none" stroke="#d8dee4" stroke-width="1" stroke-dasharray="2 5"/><circle cx="66" cy="252" r="527.7" fill="none" stroke="#d8dee4" stroke-width="1" stroke-dasharray="2 5"/><circle cx="66" cy="252" r="664.9" fill="none" stroke="#d8dee4" stroke-width="1" stroke-dasharray="2 5"/><circle cx="66" cy="252" r="770" fill="none" stroke="#cf222e" stroke-opacity=".4" stroke-width="1.2" stroke-dasharray="6 6"/></g>
+  <circle cx="66" cy="252" r="19" fill="none" stroke="#59636e" stroke-opacity=".35" stroke-width="1"/>
+  <circle cx="66" cy="252" r="9" fill="#1f2328"/>
+  <path class="trail" pathLength="1" d="M 66.0 252.0 C 87.7 250.2 152.7 245.7 196.0 241.0 C 239.3 236.3 282.7 231.2 326.0 224.0 C 369.3 216.8 412.7 208.3 456.0 198.0 C 499.3 187.7 542.7 176.3 586.0 162.0 C 629.3 147.7 694.3 120.3 716.0 112.0"/>
+  <line x1="66" y1="274" x2="66" y2="266" stroke="#818b98" stroke-width="1" stroke-dasharray="2 3"/><g class="body" style="animation-delay:0.20s"><text x="66" y="286" text-anchor="middle" class="t" font-size="14" font-weight="700" letter-spacing=".5" fill="#1f2328">UET Peshawar</text><text x="66" y="304" text-anchor="middle" class="t" font-size="11" letter-spacing="1" fill="#59636e">2021</text><text x="66" y="320" text-anchor="middle" class="t" font-size="11" fill="#818b98">origin</text></g><g class="body" style="animation-delay:1.16s"><line x1="196" y1="251" x2="196" y2="266" stroke="#818b98" stroke-width="1" stroke-dasharray="2 3"/><circle cx="196" cy="241" r="5" fill="#f6f8fa" stroke="#59636e" stroke-width="1.6"/><text x="207" y="230" class="t" font-size="10" fill="#818b98">+Δv</text></g><g class="body" style="animation-delay:1.16s"><text x="196" y="286" text-anchor="middle" class="t" font-size="14" font-weight="700" letter-spacing=".5" fill="#1f2328">ML internship</text><text x="196" y="304" text-anchor="middle" class="t" font-size="11" letter-spacing="1" fill="#59636e">2021.04</text><text x="196" y="320" text-anchor="middle" class="t" font-size="11" fill="#818b98">first contact</text></g><g class="body" style="animation-delay:1.82s"><line x1="326" y1="239" x2="326" y2="266" stroke="#818b98" stroke-width="1" stroke-dasharray="2 3"/><ellipse cx="326" cy="224" rx="19" ry="3.6" fill="none" stroke="#59636e" stroke-width="1.2" transform="rotate(-16 326 224)"/><circle cx="326" cy="224" r="10" fill="#f6f8fa" stroke="#59636e" stroke-width="1.6"/><path d="M 307 224 A 19 3.6 0 0 0 345 224" fill="none" stroke="#59636e" stroke-width="1.2" transform="rotate(-16 326 224)"/><text x="342" y="208" class="t" font-size="10" fill="#818b98">+Δv</text></g><g class="body" style="animation-delay:1.82s"><text x="326" y="286" text-anchor="middle" class="t" font-size="14" font-weight="700" letter-spacing=".5" fill="#1f2328">AntonX</text><text x="326" y="304" text-anchor="middle" class="t" font-size="11" letter-spacing="1" fill="#59636e">2021.08</text><text x="326" y="320" text-anchor="middle" class="t" font-size="11" fill="#818b98">into production</text></g><g class="body" style="animation-delay:2.48s"><line x1="456" y1="210" x2="456" y2="266" stroke="#818b98" stroke-width="1" stroke-dasharray="2 3"/><circle cx="456" cy="198" r="7" fill="#f6f8fa" stroke="#59636e" stroke-width="1.6"/><text x="469" y="185" class="t" font-size="10" fill="#818b98">+Δv</text></g><g class="body" style="animation-delay:2.48s"><text x="456" y="286" text-anchor="middle" class="t" font-size="14" font-weight="700" letter-spacing=".5" fill="#1f2328">Tripmate</text><text x="456" y="304" text-anchor="middle" class="t" font-size="11" letter-spacing="1" fill="#59636e">2024.01</text><text x="456" y="320" text-anchor="middle" class="t" font-size="11" fill="#818b98">maps &amp; motion</text></g><g class="body" style="animation-delay:3.14s"><line x1="586" y1="173" x2="586" y2="266" stroke="#818b98" stroke-width="1" stroke-dasharray="2 3"/><circle cx="586" cy="162" r="6" fill="#f6f8fa" stroke="#59636e" stroke-width="1.6"/><text x="598" y="150" class="t" font-size="10" fill="#818b98">+Δv</text></g><g class="body" style="animation-delay:3.14s"><text x="586" y="286" text-anchor="middle" class="t" font-size="14" font-weight="700" letter-spacing=".5" fill="#1f2328">Utor</text><text x="586" y="304" text-anchor="middle" class="t" font-size="11" letter-spacing="1" fill="#59636e">2024.07</text><text x="586" y="320" text-anchor="middle" class="t" font-size="11" fill="#818b98">the pocket</text></g><g class="body" style="animation-delay:3.80s"><line x1="716" y1="125" x2="716" y2="266" stroke="#818b98" stroke-width="1" stroke-dasharray="2 3"/><circle cx="716" cy="112" r="8" fill="#f6f8fa" stroke="#cf222e" stroke-width="1.6"/><text x="702" y="100" text-anchor="end" class="t" font-size="10" fill="#cf222e">+Δv</text></g><g class="body" style="animation-delay:3.80s"><text x="716" y="286" text-anchor="middle" class="t" font-size="14" font-weight="700" letter-spacing=".5" fill="#cf222e">FAR SIDE</text><text x="716" y="304" text-anchor="middle" class="t" font-size="11" letter-spacing="1" fill="#59636e">2026</text><text x="716" y="320" text-anchor="middle" class="t" font-size="11" fill="#818b98">fintech · AI</text><text x="716" y="342" text-anchor="middle" class="t" font-size="10.5" letter-spacing="2" fill="#cf222e">▲ YOU ARE HERE</text></g>
+  <g class="late">
+    <path class="beyond" d="M 716.0 112.0 C 727.7 107.0 762.7 90.3 786.0 82.0 C 809.3 73.7 833.3 67.3 856.0 62.0 C 878.7 56.7 911.0 52.0 922.0 50.0"/>
+    <path d="M 0 -4.5 L 9 0 L 0 4.5 Z" fill="#cf222e" opacity=".8" transform="translate(922 50) rotate(-10.3)"/>
+    <text x="826" y="256" class="t" font-size="10" letter-spacing="2" fill="#818b98">HELIOPAUSE</text>
+    <text x="940" y="124" text-anchor="end" class="t" font-size="10.5" letter-spacing="2" fill="#818b98">INTERSTELLAR</text>
+    <rect x="848" y="132" width="92" height="13" rx="1.5" fill="#cf222e" opacity=".9"/>
+    <text x="940" y="160" text-anchor="end" class="t" font-size="9.5" letter-spacing="2" fill="#818b98">CLASSIFIED</text>
+    <circle class="ping" cx="745" cy="99" r="5"/>
+    <circle cx="745" cy="99" r="3.8" fill="#cf222e"/>
+  </g>
+</svg>
