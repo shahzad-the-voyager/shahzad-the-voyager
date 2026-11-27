@@ -69,7 +69,7 @@ def rest_cell(x, cw, rest, t):
         g.append(f'<line x1="{x + 8:.1f}" y1="{yy}" x2="{x + cw - 8:.1f}" y2="{yy}" stroke="{t["faint"]}" stroke-width=".8" opacity=".7"/>')
     g.append(f'<rect x="{cx - 7:.1f}" y="{CELL_Y + 26 - 5}" width="14" height="5" fill="{t["fg"]}"/>')
     for k, c in enumerate(rest["cross"][:2]):
-        g.append(f'<text x="{cx:.1f}" y="{CELL_Y + 56 + k * 12}" text-anchor="middle" class="t" font-size="8.5" letter-spacing=".8" fill="{t["muted"]}">{esc(c["kind"].upper())} {c["min"]}M</text>')
+        g.append(f'<text x="{cx:.1f}" y="{CELL_Y + 56 + k * 12}" text-anchor="middle" class="t" font-size="8.5" letter-spacing=".8" fill="{t["muted"]}">{esc(c["kind"].upper())}{f" {c['min']}M" if c.get("min") else ""}</text>')
     g.append(f'<text x="{cx:.1f}" y="{CELL_Y + 84}" text-anchor="middle" class="t" font-size="8.5" font-weight="700" letter-spacing="1" fill="{t["fg"]}">REST</text>')
     return "".join(g)
 

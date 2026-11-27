@@ -20,6 +20,10 @@
     {
       "date": "2026-11-25",
       "cross": [{"kind": "walk", "min": 20}, {"kind": "pull", "min": 60}]
+    },
+    {
+      "date": "2026-11-27",
+      "cross": [{"kind": "push day"}, {"kind": "retro", "min": 20, "note": "backwards incline treadmill walk"}]
     }
   ]
 }
