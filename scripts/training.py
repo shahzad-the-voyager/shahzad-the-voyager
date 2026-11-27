@@ -22,13 +22,19 @@ def mmss(t):
 
 def summarize(run):
     paces = [secs(p) for p in run["splits"]]
-    km = run.get("km", float(len(paces)))
-    total = run.get("time_s", sum(paces))
-    return dict(date=dt.date.fromisoformat(run["date"]), paces=paces,
+    n = len(paces)
+    km = run.get("km", float(n))
+    last = round(km - (n - 1), 2) if n else 0
+    partial = n > 0 and 0 < last < 1
+    total = run.get("time_s", sum(paces[:-1]) + paces[-1] * last if partial else sum(paces))
+    kms = [f"KM {i + 1}" for i in range(n)]
+    if partial:
+        kms[-1] = f"{last:g} KM"
+    return dict(date=dt.date.fromisoformat(run["date"]), paces=paces, kms=kms,
                 gap=[secs(p) for p in run.get("gap", [])], km=km, total=total, avg=total / km)
 
 
-def bars(x, y, w, h, paces, t, color, labels=False):
+def bars(x, y, w, h, paces, t, color, labels=None):
     if not paces:
         return ""
     fast, slow = min(paces), max(paces)
@@ -49,7 +55,7 @@ def bars(x, y, w, h, paces, t, color, labels=False):
             if bw >= 24 or best or p == slow:
                 out.append(f'<text x="{bx + bw / 2:.1f}" y="{y + h - bh - 8:.1f}" text-anchor="middle" class="t" font-size="{pace_fs}" '
                            f'fill="{t["red"] if best else t["fg"]}">{mmss(p)}</text>')
-            km = f"KM {i + 1}" if bw >= 38 else f"{i + 1}"
+            km = labels[i] if bw >= 38 else labels[i].replace("KM", "").strip()
             out.append(f'<text x="{bx + bw / 2:.1f}" y="{y + h + 16:.1f}" text-anchor="middle" class="t" font-size="9.5" '
                        f'letter-spacing="1" fill="{t["faint"]}">{km}</text>')
     return "".join(out)
@@ -124,6 +130,11 @@ def render(t, mission, runs, today, rests=()):
         loop_t = best_avg * loop_km
         stats.append(f"BEST AVG {mmss(best_avg)} /KM → ONE {loop_km} KM LOOP IN {mmss(loop_t)}")
         stats.append(f"AT THAT PACE: {mmss(3600 - loop_t)} BANKED EVERY HOUR · GOAL {goal} LOOPS")
+    loops = [r for r in runs if 0.99 * loop_km <= r["km"] <= 1.05 * loop_km]
+    if loops:
+        lr = min(loops, key=lambda r: r["total"])
+        stats.append(f"FULL LOOP {lr['date'].strftime('%d %b').upper()}: {lr['km']:g} KM IN {mmss(lr['total'])} · "
+                     f"{mmss(3600 - lr['total'])} SPARE BEFORE THE NEXT BELL")
     stat_svg = "".join(
         f'<text x="300" y="{70 + i * 22}" class="t" font-size="12" letter-spacing="1.2" fill="{t["fg"] if i == 0 else t["muted"]}">{esc(s)}</text>'
         for i, s in enumerate(stats))
@@ -133,7 +144,7 @@ def render(t, mission, runs, today, rests=()):
         ld = latest["date"].strftime("%d %b").upper()
         note = ""
         if latest["paces"] and latest["paces"][-1] == min(latest["paces"]) and len(latest["paces"]) > 1:
-            note = " · FASTEST KM LAST ▲"
+            note = " · FASTEST SPLIT LAST ▲"
         head = (f'LATEST · TAKE {take_no[latest["date"]]:02d} · {ld} · {latest["km"]:.2f} KM · {mmss(latest["total"])} · '
                 f'AVG {mmss(latest["avg"])} /KM{note}')
         bw = min(560, max(360, len(latest["paces"]) * 44))
@@ -150,7 +161,7 @@ def render(t, mission, runs, today, rests=()):
         side.append("TALLER BAR = FASTER KM · CORAL = FASTEST")
         y0 = 370 - (len(side) - 1) * 16
         detail = (f'<text x="{CELL_X0}" y="300" class="t" font-size="11" letter-spacing="1.5" fill="{t["muted"]}">{esc(head)}</text>'
-                  + bars(CELL_X0, 326, bw, 44, latest["paces"], t, t["blue"], labels=True)
+                  + bars(CELL_X0, 326, bw, 44, latest["paces"], t, t["blue"], labels=latest["kms"])
                   + "".join(f'<text x="{rx}" y="{y0 + k * 16}" class="t" font-size="10" letter-spacing="1" fill="{t["faint"]}">{esc(line)}</text>'
                             for k, line in enumerate(side)))
 
